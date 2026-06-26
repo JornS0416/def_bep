@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-06-18 18:29:52",
+  "model": "DINOv2 (facebook/dinov2-base), frozen, mean-pool over 81 CLS tokens",
+  "evaluation": "LODO \u2014 train on D-1 datasets, test on held-out",
+  "probe": "LogisticRegression (C=1.0, class_weight=balanced)",
+  "note": "Feature aggregation: mean over (81, 768) \u2192 (768,). Within-dataset LOSO uses BiLSTM (dinov2_loso.py).",
+  "datasets": [
+    "PD-GaM",
+    "BMClab",
+    "3DGait",
+    "T-SDU-PD"
+  ],
+  "folds": [
+    {
+      "held_out": "PD-GaM",
+      "n_train_clips": 2034,
+      "n_test_clips": 2401,
+      "n_test_walks": 1700,
+      "train_datasets": {
+        "BMClab": 893,
+        "3DGait": 210,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 812,
+        "1": 861,
+        "2": 692,
+        "3": 36
+      },
+      "f1_macro_03": 0.3714,
+      "f1_macro_02": 0.374,
+      "f1_weighted": 0.481,
+      "accuracy": 0.5335,
+      "mae": 0.6429,
+      "qwk": 0.3059,
+      "spearman": 0.2693
+    },
+    {
+      "held_out": "BMClab",
+      "n_train_clips": 3542,
+      "n_test_clips": 893,
+      "n_test_walks": 779,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "3DGait": 210,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 341,
+        "1": 277,
+        "2": 275
+      },
+      "f1_macro_03": 0.4891,
+      "f1_macro_02": 0.4891,
+      "f1_weighted": 0.5254,
+      "accuracy": 0.5327,
+      "mae": 0.5006,
+      "qwk": 0.4317,
+      "spearman": 0.5565
+    },
+    {
+      "held_out": "3DGait",
+      "n_train_clips": 4225,
+      "n_test_clips": 210,
+      "n_test_walks": 90,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "BMClab": 893,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 34,
+        "1": 89,
+        "2": 44,
+        "3": 43
+      },
+      "f1_macro_03": 0.3308,
+      "f1_macro_02": 0.4411,
+      "f1_weighted": 0.4001,
+      "accuracy": 0.4111,
+      "mae": 0.8,
+      "qwk": 0.1142,
+      "spearman": 0.3186
+    },
+    {
+      "held_out": "T-SDU-PD",
+      "n_train_clips": 3504,
+      "n_test_clips": 931,
+      "n_test_walks": 381,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "BMClab": 893,
+        "3DGait": 210
+      },
+      "updrs_dist_test": {
+        "0": 179,
+        "1": 267,
+        "2": 485
+      },
+      "f1_macro_03": 0.298,
+      "f1_macro_02": 0.3973,
+      "f1_weighted": 0.3947,
+      "accuracy": 0.3858,
+      "mae": 0.6168,
+      "qwk": 0.2687,
+      "spearman": 0.3267
+    }
+  ],
+  "summary": {
+    "f1_macro_03_mean": 0.3723,
+    "f1_macro_03_std": 0.0723,
+    "f1_macro_02_mean": 0.4254,
+    "f1_macro_02_std": 0.044,
+    "f1_weighted_mean": 0.4503,
+    "f1_weighted_std": 0.0552,
+    "accuracy_mean": 0.4658,
+    "accuracy_std": 0.0679,
+    "mae_mean": 0.6401,
+    "mae_std": 0.1067,
+    "qwk_mean": 0.2801,
+    "qwk_std": 0.1132,
+    "spearman_mean": 0.3678,
+    "spearman_std": 0.1112
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "timestamp": "2026-06-18 18:31:59",
+  "model": "V-JEPA (ViT-L/16), frozen, mean-pool over 1568 tokens",
+  "evaluation": "CDA \u2014 train on single source dataset, evaluate on each other dataset separately (12 source\u2192target pairs). Diagonal (in-domain) intentionally omitted \u2014 use LOSO results for that; see videomae_cda.py docstring for rationale.",
+  "probe": "LogisticRegression (C=1.0, class_weight=balanced) + Ridge (alpha=1.0)",
+  "datasets": [
+    "PD-GaM",
+    "BMClab",
+    "3DGait",
+    "T-SDU-PD"
+  ],
+  "pairs": [
+    {
+      "source": "PD-GaM",
+      "target": "BMClab",
+      "n_train_clips": 2401,
+      "n_test_clips": 893,
+      "n_test_walks": 779,
+      "updrs_dist_test": {
+        "0": 341,
+        "1": 277,
+        "2": 275
+      },
+      "f1_macro_03": 0.3807,
+      "f1_macro_02": 0.3807,
+      "f1_weighted": 0.3893,
+      "accuracy": 0.4377,
+      "mae": 0.5327,
+      "qwk": 0.3392,
+      "spearman": 0.4701,
+      "cm": [
+        [
+          188,
+          18,
+          135,
+          0
+        ],
+        [
+          78,
+          15,
+          183,
+          0
+        ],
+        [
+          20,
+          4,
+          138,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "PD-GaM",
+      "target": "3DGait",
+      "n_train_clips": 2401,
+      "n_test_clips": 210,
+      "n_test_walks": 90,
+      "updrs_dist_test": {
+        "0": 34,
+        "1": 89,
+        "2": 44,
+        "3": 43
+      },
+      "f1_macro_03": 0.2353,
+      "f1_macro_02": 0.3138,
+      "f1_weighted": 0.2251,
+      "accuracy": 0.3,
+      "mae": 0.7222,
+      "qwk": 0.331,
+      "spearman": 0.476,
+      "cm": [
+        [
+          13,
+          0,
+          11,
+          0
+        ],
+        [
+          7,
+          1,
+          34,
+          0
+        ],
+        [
+          1,
+          0,
+          13,
+          0
+        ],
+        [
+          0,
+          0,
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "PD-GaM",
+      "target": "T-SDU-PD",
+      "n_train_clips": 2401,
+      "n_test_clips": 931,
+      "n_test_walks": 381,
+      "updrs_dist_test": {
+        "0": 179,
+        "1": 267,
+        "2": 485
+      },
+      "f1_macro_03": 0.3882,
+      "f1_macro_02": 0.3882,
+      "f1_weighted": 0.4051,
+      "accuracy": 0.4698,
+      "mae": 1.0105,
+      "qwk": 0.0839,
+      "spearman": 0.3335,
+      "cm": [
+        [
+          74,
+          3,
+          19,
+          0
+        ],
+        [
+          53,
+          4,
+          61,
+          0
+        ],
+        [
+          60,
+          6,
+          101,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "BMClab",
+      "target": "PD-GaM",
+      "n_train_clips": 893,
+      "n_test_clips": 2401,
+      "n_test_walks": 1700,
+      "updrs_dist_test": {
+        "0": 812,
+        "1": 861,
+        "2": 692,
+        "3": 36
+      },
+      "f1_macro_03": 0.2806,
+      "f1_macro_02": 0.3742,
+      "f1_weighted": 0.3724,
+      "accuracy": 0.5088,
+      "mae": 0.7253,
+      "qwk": 0.0,
+      "spearman": 0.299,
+      "cm": [
+        [
+          774,
+          0,
+          9,
+          0
+        ],
+        [
+          619,
+          0,
+          16,
+          0
+        ],
+        [
+          157,
+          0,
+          91,
+          0
+        ],
+        [
+          2,
+          0,
+          32,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "BMClab",
+      "target": "3DGait",
+      "n_train_clips": 893,
+      "n_test_clips": 210,
+      "n_test_walks": 90,
+      "updrs_dist_test": {
+        "0": 34,
+        "1": 89,
+        "2": 44,
+        "3": 43
+      },
+      "f1_macro_03": 0.3576,
+      "f1_macro_02": 0.4768,
+      "f1_weighted": 0.4253,
+      "accuracy": 0.4444,
+      "mae": 0.8556,
+      "qwk": 0.1556,
+      "spearman": 0.2569,
+      "cm": [
+        [
+          15,
+          4,
+          5,
+          0
+        ],
+        [
+          10,
+          14,
+          18,
+          0
+        ],
+        [
+          1,
+          2,
+          11,
+          0
+        ],
+        [
+          0,
+          2,
+          8,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "BMClab",
+      "target": "T-SDU-PD",
+      "n_train_clips": 893,
+      "n_test_clips": 931,
+      "n_test_walks": 381,
+      "updrs_dist_test": {
+        "0": 179,
+        "1": 267,
+        "2": 485
+      },
+      "f1_macro_03": 0.4418,
+      "f1_macro_02": 0.4418,
+      "f1_weighted": 0.4553,
+      "accuracy": 0.4698,
+      "mae": 0.8294,
+      "qwk": 0.1868,
+      "spearman": 0.1834,
+      "cm": [
+        [
+          54,
+          17,
+          25,
+          0
+        ],
+        [
+          35,
+          25,
+          58,
+          0
+        ],
+        [
+          32,
+          35,
+          100,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "3DGait",
+      "target": "PD-GaM",
+      "n_train_clips": 210,
+      "n_test_clips": 2401,
+      "n_test_walks": 1700,
+      "updrs_dist_test": {
+        "0": 812,
+        "1": 861,
+        "2": 692,
+        "3": 36
+      },
+      "f1_macro_03": 0.3534,
+      "f1_macro_02": 0.3478,
+      "f1_weighted": 0.4407,
+      "accuracy": 0.48,
+      "mae": 0.6024,
+      "qwk": 0.3557,
+      "spearman": 0.3789,
+      "cm": [
+        [
+          326,
+          447,
+          0,
+          10
+        ],
+        [
+          166,
+          465,
+          0,
+          4
+        ],
+        [
+          28,
+          158,
+          0,
+          62
+        ],
+        [
+          0,
+          8,
+          1,
+          25
+        ]
+      ]
+    },
+    {
+      "source": "3DGait",
+      "target": "BMClab",
+      "n_train_clips": 210,
+      "n_test_clips": 893,
+      "n_test_walks": 779,
+      "updrs_dist_test": {
+        "0": 341,
+        "1": 277,
+        "2": 275
+      },
+      "f1_macro_03": 0.3487,
+      "f1_macro_02": 0.465,
+      "f1_weighted": 0.474,
+      "accuracy": 0.466,
+      "mae": 0.5854,
+      "qwk": 0.4531,
+      "spearman": 0.4442,
+      "cm": [
+        [
+          183,
+          151,
+          7,
+          0
+        ],
+        [
+          127,
+          125,
+          21,
+          3
+        ],
+        [
+          21,
+          71,
+          55,
+          15
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "3DGait",
+      "target": "T-SDU-PD",
+      "n_train_clips": 210,
+      "n_test_clips": 931,
+      "n_test_walks": 381,
+      "updrs_dist_test": {
+        "0": 179,
+        "1": 267,
+        "2": 485
+      },
+      "f1_macro_03": 0.2702,
+      "f1_macro_02": 0.3603,
+      "f1_weighted": 0.3337,
+      "accuracy": 0.3701,
+      "mae": 0.7795,
+      "qwk": 0.253,
+      "spearman": 0.3004,
+      "cm": [
+        [
+          58,
+          34,
+          3,
+          1
+        ],
+        [
+          46,
+          65,
+          3,
+          4
+        ],
+        [
+          65,
+          69,
+          18,
+          15
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "T-SDU-PD",
+      "target": "PD-GaM",
+      "n_train_clips": 931,
+      "n_test_clips": 2401,
+      "n_test_walks": 1700,
+      "updrs_dist_test": {
+        "0": 812,
+        "1": 861,
+        "2": 692,
+        "3": 36
+      },
+      "f1_macro_03": 0.1641,
+      "f1_macro_02": 0.2188,
+      "f1_weighted": 0.295,
+      "accuracy": 0.4618,
+      "mae": 2.2747,
+      "qwk": 0.0,
+      "spearman": 0.0403,
+      "cm": [
+        [
+          782,
+          0,
+          1,
+          0
+        ],
+        [
+          635,
+          0,
+          0,
+          0
+        ],
+        [
+          245,
+          0,
+          3,
+          0
+        ],
+        [
+          25,
+          3,
+          6,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "T-SDU-PD",
+      "target": "BMClab",
+      "n_train_clips": 931,
+      "n_test_clips": 893,
+      "n_test_walks": 779,
+      "updrs_dist_test": {
+        "0": 341,
+        "1": 277,
+        "2": 275
+      },
+      "f1_macro_03": 0.4649,
+      "f1_macro_02": 0.4649,
+      "f1_weighted": 0.4821,
+      "accuracy": 0.475,
+      "mae": 0.7574,
+      "qwk": 0.162,
+      "spearman": 0.2042,
+      "cm": [
+        [
+          174,
+          104,
+          63,
+          0
+        ],
+        [
+          74,
+          117,
+          85,
+          0
+        ],
+        [
+          24,
+          59,
+          79,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "source": "T-SDU-PD",
+      "target": "3DGait",
+      "n_train_clips": 931,
+      "n_test_clips": 210,
+      "n_test_walks": 90,
+      "updrs_dist_test": {
+        "0": 34,
+        "1": 89,
+        "2": 44,
+        "3": 43
+      },
+      "f1_macro_03": 0.3429,
+      "f1_macro_02": 0.4573,
+      "f1_weighted": 0.4444,
+      "accuracy": 0.4444,
+      "mae": 1.0,
+      "qwk": 0.1337,
+      "spearman": 0.1645,
+      "cm": [
+        [
+          11,
+          2,
+          11,
+          0
+        ],
+        [
+          10,
+          20,
+          12,
+          0
+        ],
+        [
+          3,
+          2,
+          9,
+          0
+        ],
+        [
+          6,
+          1,
+          3,
+          0
+        ]
+      ]
+    }
+  ]
+}

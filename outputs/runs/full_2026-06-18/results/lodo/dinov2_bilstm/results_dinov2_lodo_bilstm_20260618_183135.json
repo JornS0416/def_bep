@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-06-18 18:31:35",
+  "model": "DINOv2 ViT-B/14 (facebook/dinov2-base), frozen + BiLSTM+Attention",
+  "evaluation": "LODO \u2014 train on D-1 datasets (pooled, full (81,768) sequences, NO pooling), test on held-out dataset. 'Opposite-architecture' counterpart to dinov2_lodo.py (which uses mean-pooling + linear probe). See module docstring for what this comparison is meant to test.",
+  "hp": "FIXED for all folds: {'hidden_size': 256, 'dropout': 0.3, 'learning_rate': 0.001} \u2014 NOT searched per fold (an HP search on a heterogeneous mixed-cohort pool would be confounded by the very thing we're testing; also prohibitively expensive). See module docstring.",
+  "note": "No feature pooling \u2014 full (81, 768) sequences fed to the BiLSTM, identical input format to dinov2_loso.py. Compare against dinov2_lodo.py (linear probe, same folds, same held-out datasets) to test whether mixing heterogeneous cohorts actually breaks the BiLSTM's temporal assumptions.",
+  "datasets": [
+    "PD-GaM",
+    "BMClab",
+    "3DGait",
+    "T-SDU-PD"
+  ],
+  "folds": [
+    {
+      "held_out": "PD-GaM",
+      "n_train_clips": 2034,
+      "n_test_clips": 2401,
+      "n_test_walks": 1700,
+      "train_datasets": {
+        "BMClab": 893,
+        "3DGait": 210,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 812,
+        "1": 861,
+        "2": 692,
+        "3": 36
+      },
+      "f1_macro_03": 0.4309,
+      "f1_macro_02": 0.384,
+      "f1_weighted": 0.3954,
+      "accuracy": 0.5224,
+      "mae": 0.5647,
+      "qwk": 0.4094,
+      "spearman": 0.6703
+    },
+    {
+      "held_out": "BMClab",
+      "n_train_clips": 3542,
+      "n_test_clips": 893,
+      "n_test_walks": 779,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "3DGait": 210,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 341,
+        "1": 277,
+        "2": 275
+      },
+      "f1_macro_03": 0.4807,
+      "f1_macro_02": 0.4807,
+      "f1_weighted": 0.4436,
+      "accuracy": 0.4878,
+      "mae": 0.5135,
+      "qwk": 0.4387,
+      "spearman": 0.5634
+    },
+    {
+      "held_out": "3DGait",
+      "n_train_clips": 4225,
+      "n_test_clips": 210,
+      "n_test_walks": 90,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "BMClab": 893,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 34,
+        "1": 89,
+        "2": 44,
+        "3": 43
+      },
+      "f1_macro_03": 0.1515,
+      "f1_macro_02": 0.2019,
+      "f1_weighted": 0.1857,
+      "accuracy": 0.2444,
+      "mae": 0.8889,
+      "qwk": 0.1733,
+      "spearman": 0.4227
+    },
+    {
+      "held_out": "T-SDU-PD",
+      "n_train_clips": 3504,
+      "n_test_clips": 931,
+      "n_test_walks": 381,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "BMClab": 893,
+        "3DGait": 210
+      },
+      "updrs_dist_test": {
+        "0": 179,
+        "1": 267,
+        "2": 485
+      },
+      "f1_macro_03": 0.3147,
+      "f1_macro_02": 0.4196,
+      "f1_weighted": 0.4223,
+      "accuracy": 0.4121,
+      "mae": 0.6719,
+      "qwk": 0.3401,
+      "spearman": 0.3867
+    }
+  ],
+  "summary": {
+    "f1_macro_03_mean": 0.3444,
+    "f1_macro_03_std": 0.1266,
+    "f1_macro_02_mean": 0.3715,
+    "f1_macro_02_std": 0.1039,
+    "f1_weighted_mean": 0.3618,
+    "f1_weighted_std": 0.1031,
+    "accuracy_mean": 0.4167,
+    "accuracy_std": 0.1072,
+    "mae_mean": 0.6597,
+    "mae_std": 0.1441,
+    "qwk_mean": 0.3404,
+    "qwk_std": 0.1029,
+    "spearman_mean": 0.5108,
+    "spearman_std": 0.1133
+  }
+}

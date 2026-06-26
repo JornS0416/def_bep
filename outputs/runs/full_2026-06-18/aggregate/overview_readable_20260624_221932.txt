@@ -1,0 +1,188 @@
+DINOv2 / VideoMAE / V-JEPA — full evaluation overview
+Generated: 2026-06-24 22:19:32
+Source files aggregated: 27 (most recent run per method×model×variant group)
+Columns shown here: model | variant | scope | scope_type | n_clips | f1_macro_02 | accuracy | qwk | mae | spearman
+(— = not available / NaN. Full table incl. all 7 metrics, mean±std, n_subjects/n_folds, best_hp and source_file is in the .csv / .xlsx next to this file.)
+
+========================= LOSO =========================
+   model variant    scope                     scope_type  n_clips f1_macro_02 accuracy   qwk   mae spearman
+videomae default   3DGait dataset (LOSO-fold-aggregated)    210.0       0.542    0.500 0.426 0.644    0.458
+videomae default   BMClab dataset (LOSO-fold-aggregated)    893.0       0.581    0.611 0.214 0.666    0.297
+videomae default   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.617    0.647 0.551 0.440    0.595
+videomae default T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.411    0.420 0.266 0.745    0.333
+videomae    lora   3DGait dataset (LOSO-fold-aggregated)    210.0       0.480    0.433 0.506 0.622    0.552
+videomae    lora   BMClab dataset (LOSO-fold-aggregated)    893.0       0.561    0.591 0.265 0.638    0.313
+videomae    lora   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.595    0.622 0.538 0.453    0.578
+videomae    lora T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.398    0.409 0.228 0.790    0.314
+  dinov2 default   3DGait dataset (LOSO-fold-aggregated)    210.0       0.357    0.389 0.103 0.878    0.283
+  dinov2 default   BMClab dataset (LOSO-fold-aggregated)    893.0       0.553    0.587 0.433 0.502    0.515
+  dinov2 default   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.631    0.664 0.676 0.341    0.693
+  dinov2 default T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.369    0.365 0.395 0.682    0.515
+   vjepa default   3DGait dataset (LOSO-fold-aggregated)    210.0       0.419    0.400 0.452 0.667    0.522
+   vjepa default   BMClab dataset (LOSO-fold-aggregated)    893.0       0.566    0.589 0.355 0.594    0.404
+   vjepa default   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.608    0.632 0.550 0.431    0.583
+   vjepa default T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.419    0.433 0.119 0.808    0.222
+  vjepa2 default   3DGait dataset (LOSO-fold-aggregated)    210.0       0.439    0.422 0.452 0.678    0.492
+  vjepa2 default   BMClab dataset (LOSO-fold-aggregated)    893.0       0.579    0.598 0.238 0.641    0.284
+  vjepa2 default   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.616    0.640 0.613 0.392    0.637
+  vjepa2 default T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.417    0.430 0.295 0.653    0.419
+  vjepa2     64f   3DGait dataset (LOSO-fold-aggregated)    210.0       0.460    0.444 0.513 0.589    0.588
+  vjepa2     64f   BMClab dataset (LOSO-fold-aggregated)    893.0       0.552    0.570 0.378 0.620    0.398
+  vjepa2     64f   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.616    0.642 0.656 0.367    0.662
+  vjepa2     64f T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.401    0.409 0.213 0.714    0.325
+
+========================= LODO =========================
+   model variant           scope                            scope_type  n_clips f1_macro_02 accuracy   qwk   mae spearman
+videomae default          3DGait       held-out dataset (single split)    210.0       0.487    0.467 0.349 0.644    0.591
+videomae default ALL (LODO mean) overall (mean over held-out datasets)      NaN       0.381    0.420 0.265 0.701    0.403
+videomae default          BMClab       held-out dataset (single split)    893.0       0.420    0.429 0.148 0.753    0.283
+videomae default          PD-GaM       held-out dataset (single split)   2401.0       0.245    0.405 0.372 0.588    0.412
+videomae default        T-SDU-PD       held-out dataset (single split)    931.0       0.372    0.378 0.189 0.816    0.326
+videomae    lora          3DGait       held-out dataset (single split)    210.0       0.494    0.467 0.440 0.600    0.599
+videomae    lora ALL (LODO mean) overall (mean over held-out datasets)      NaN       0.396    0.426 0.289 0.679    0.404
+videomae    lora          BMClab       held-out dataset (single split)    893.0       0.421    0.429 0.204 0.718    0.327
+videomae    lora          PD-GaM       held-out dataset (single split)   2401.0       0.314    0.437 0.233 0.668    0.312
+videomae    lora        T-SDU-PD       held-out dataset (single split)    931.0       0.353    0.373 0.279 0.732    0.378
+  dinov2 default          3DGait       held-out dataset (single split)    210.0       0.441    0.411 0.114 0.800    0.319
+  dinov2 default ALL (LODO mean) overall (mean over held-out datasets)      NaN       0.425    0.466 0.280 0.640    0.368
+  dinov2 default          BMClab       held-out dataset (single split)    893.0       0.489    0.533 0.432 0.501    0.556
+  dinov2 default          PD-GaM       held-out dataset (single split)   2401.0       0.374    0.533 0.306 0.643    0.269
+  dinov2 default        T-SDU-PD       held-out dataset (single split)    931.0       0.397    0.386 0.269 0.617    0.327
+  dinov2  bilstm          3DGait       held-out dataset (single split)    210.0       0.202    0.244 0.173 0.889    0.423
+  dinov2  bilstm ALL (LODO mean) overall (mean over held-out datasets)      NaN       0.371    0.417 0.340 0.660    0.511
+  dinov2  bilstm          BMClab       held-out dataset (single split)    893.0       0.481    0.488 0.439 0.513    0.563
+  dinov2  bilstm          PD-GaM       held-out dataset (single split)   2401.0       0.384    0.522 0.409 0.565    0.670
+  dinov2  bilstm        T-SDU-PD       held-out dataset (single split)    931.0       0.420    0.412 0.340 0.672    0.387
+   vjepa default          3DGait       held-out dataset (single split)    210.0       0.482    0.444 0.461 0.567    0.591
+   vjepa default ALL (LODO mean) overall (mean over held-out datasets)      NaN       0.431    0.455 0.350 0.623    0.435
+   vjepa default          BMClab       held-out dataset (single split)    893.0       0.526    0.544 0.385 0.558    0.495
+   vjepa default          PD-GaM       held-out dataset (single split)   2401.0       0.328    0.441 0.273 0.668    0.302
+   vjepa default        T-SDU-PD       held-out dataset (single split)    931.0       0.390    0.391 0.283 0.698    0.351
+  vjepa2 default          3DGait       held-out dataset (single split)    210.0       0.430    0.400 0.262 0.700    0.464
+  vjepa2 default ALL (LODO mean) overall (mean over held-out datasets)      NaN       0.366    0.398 0.205 0.758    0.364
+  vjepa2 default          BMClab       held-out dataset (single split)    893.0       0.327    0.336 0.139 0.802    0.310
+  vjepa2 default          PD-GaM       held-out dataset (single split)   2401.0       0.371    0.497 0.156 0.795    0.256
+  vjepa2 default        T-SDU-PD       held-out dataset (single split)    931.0       0.337    0.357 0.264 0.735    0.426
+  vjepa2     64f          3DGait       held-out dataset (single split)    210.0       0.415    0.400 0.462 0.600    0.583
+  vjepa2     64f ALL (LODO mean) overall (mean over held-out datasets)      NaN       0.349    0.379 0.294 0.712    0.411
+  vjepa2     64f          BMClab       held-out dataset (single split)    893.0       0.311    0.320 0.269 0.688    0.432
+  vjepa2     64f          PD-GaM       held-out dataset (single split)   2401.0       0.339    0.453 0.182 0.792    0.236
+  vjepa2     64f        T-SDU-PD       held-out dataset (single split)    931.0       0.330    0.344 0.262 0.766    0.391
+
+========================= CDA =========================
+   model variant             scope                        scope_type  n_clips f1_macro_02 accuracy    qwk   mae spearman
+videomae default   3DGait → BMClab source→target pair (single split)    893.0       0.479    0.542  0.496 0.483    0.519
+videomae default   3DGait → PD-GaM source→target pair (single split)   2401.0       0.319    0.471  0.355 0.608    0.331
+videomae default 3DGait → T-SDU-PD source→target pair (single split)    931.0       0.300    0.336  0.148 0.877    0.213
+videomae default   BMClab → 3DGait source→target pair (single split)    210.0       0.544    0.500  0.352 0.844    0.376
+videomae default   BMClab → PD-GaM source→target pair (single split)   2401.0       0.453    0.525  0.181 0.705    0.130
+videomae default BMClab → T-SDU-PD source→target pair (single split)    931.0       0.480    0.512  0.254 0.890    0.336
+videomae default   PD-GaM → 3DGait source→target pair (single split)    210.0       0.385    0.433  0.343 0.822    0.613
+videomae default   PD-GaM → BMClab source→target pair (single split)    893.0       0.326    0.409  0.162 0.651    0.241
+videomae default PD-GaM → T-SDU-PD source→target pair (single split)    931.0       0.275    0.344  0.063 1.081    0.230
+videomae default T-SDU-PD → 3DGait source→target pair (single split)    210.0       0.335    0.356 -0.056 0.944    0.124
+videomae default T-SDU-PD → BMClab source→target pair (single split)    893.0       0.435    0.443  0.147 0.824    0.242
+videomae default T-SDU-PD → PD-GaM source→target pair (single split)   2401.0       0.280    0.332  0.281 0.903    0.458
+videomae    lora   3DGait → BMClab source→target pair (single split)    893.0       0.490    0.552  0.491 0.486    0.507
+videomae    lora   3DGait → PD-GaM source→target pair (single split)   2401.0       0.314    0.483  0.320 0.625    0.242
+videomae    lora 3DGait → T-SDU-PD source→target pair (single split)    931.0       0.291    0.331  0.112 0.879    0.231
+videomae    lora   BMClab → 3DGait source→target pair (single split)    210.0       0.518    0.489  0.296 0.867    0.232
+videomae    lora   BMClab → PD-GaM source→target pair (single split)   2401.0       0.281    0.477  0.077 0.705    0.081
+videomae    lora BMClab → T-SDU-PD source→target pair (single split)    931.0       0.495    0.512  0.117 1.024    0.243
+videomae    lora   PD-GaM → 3DGait source→target pair (single split)    210.0       0.437    0.411  0.439 0.733    0.555
+videomae    lora   PD-GaM → BMClab source→target pair (single split)    893.0       0.403    0.425  0.143 0.664    0.260
+videomae    lora PD-GaM → T-SDU-PD source→target pair (single split)    931.0       0.408    0.404  0.073 1.005    0.254
+videomae    lora T-SDU-PD → 3DGait source→target pair (single split)    210.0       0.317    0.356  0.069 0.933    0.163
+videomae    lora T-SDU-PD → BMClab source→target pair (single split)    893.0       0.433    0.440  0.161 0.840    0.253
+videomae    lora T-SDU-PD → PD-GaM source→target pair (single split)   2401.0       0.314    0.401  0.261 0.865    0.426
+  dinov2 default   3DGait → BMClab source→target pair (single split)    893.0       0.452    0.476  0.164 0.901    0.272
+  dinov2 default   3DGait → PD-GaM source→target pair (single split)   2401.0       0.332    0.448  0.055 0.896    0.038
+  dinov2 default 3DGait → T-SDU-PD source→target pair (single split)    931.0       0.295    0.326  0.220 0.772    0.272
+  dinov2 default   BMClab → 3DGait source→target pair (single split)    210.0       0.375    0.356  0.096 1.100    0.029
+  dinov2 default   BMClab → PD-GaM source→target pair (single split)   2401.0       0.438    0.510  0.137 0.716    0.017
+  dinov2 default BMClab → T-SDU-PD source→target pair (single split)    931.0       0.390    0.415 -0.012 1.129    0.054
+  dinov2 default   PD-GaM → 3DGait source→target pair (single split)    210.0       0.131    0.222  0.005 1.233    0.000
+  dinov2 default   PD-GaM → BMClab source→target pair (single split)    893.0       0.257    0.298  0.056 1.184    0.329
+  dinov2 default PD-GaM → T-SDU-PD source→target pair (single split)    931.0       0.233    0.415  0.106 0.864    0.254
+  dinov2 default T-SDU-PD → 3DGait source→target pair (single split)    210.0       0.305    0.322  0.064 0.789    0.137
+  dinov2 default T-SDU-PD → BMClab source→target pair (single split)    893.0       0.409    0.457  0.392 0.515    0.443
+  dinov2 default T-SDU-PD → PD-GaM source→target pair (single split)   2401.0       0.300    0.482  0.125 0.693    0.013
+  dinov2  bilstm   3DGait → BMClab source→target pair (single split)    893.0       0.374    0.504  0.289 0.615    0.390
+  dinov2  bilstm   3DGait → PD-GaM source→target pair (single split)   2401.0       0.255    0.392  0.301 0.666    0.397
+  dinov2  bilstm 3DGait → T-SDU-PD source→target pair (single split)    931.0       0.323    0.370  0.188 0.693    0.394
+  dinov2  bilstm   BMClab → 3DGait source→target pair (single split)    210.0       0.341    0.322  0.282 0.800    0.303
+  dinov2  bilstm   BMClab → PD-GaM source→target pair (single split)   2401.0       0.392    0.521  0.401 0.559    0.620
+  dinov2  bilstm BMClab → T-SDU-PD source→target pair (single split)    931.0       0.457    0.467  0.358 0.648    0.325
+  dinov2  bilstm   PD-GaM → 3DGait source→target pair (single split)    210.0       0.106    0.200  0.061 1.156    0.326
+  dinov2  bilstm   PD-GaM → BMClab source→target pair (single split)    893.0       0.219    0.243  0.218 0.956    0.554
+  dinov2  bilstm PD-GaM → T-SDU-PD source→target pair (single split)    931.0       0.246    0.436  0.057 0.795    0.324
+  dinov2  bilstm T-SDU-PD → 3DGait source→target pair (single split)    210.0       0.281    0.300  0.300 0.878    0.441
+  dinov2  bilstm T-SDU-PD → BMClab source→target pair (single split)    893.0       0.316    0.435  0.174 0.697    0.241
+  dinov2  bilstm T-SDU-PD → PD-GaM source→target pair (single split)   2401.0       0.324    0.489  0.214 0.632    0.350
+   vjepa default   3DGait → BMClab source→target pair (single split)    893.0       0.465    0.466  0.453 0.585    0.444
+   vjepa default   3DGait → PD-GaM source→target pair (single split)   2401.0       0.348    0.480  0.356 0.602    0.379
+   vjepa default 3DGait → T-SDU-PD source→target pair (single split)    931.0       0.360    0.370  0.253 0.779    0.300
+   vjepa default   BMClab → 3DGait source→target pair (single split)    210.0       0.477    0.444  0.156 0.856    0.257
+   vjepa default   BMClab → PD-GaM source→target pair (single split)   2401.0       0.374    0.509  0.000 0.725    0.299
+   vjepa default BMClab → T-SDU-PD source→target pair (single split)    931.0       0.442    0.470  0.187 0.829    0.183
+   vjepa default   PD-GaM → 3DGait source→target pair (single split)    210.0       0.314    0.300  0.331 0.722    0.476
+   vjepa default   PD-GaM → BMClab source→target pair (single split)    893.0       0.381    0.438  0.339 0.533    0.470
+   vjepa default PD-GaM → T-SDU-PD source→target pair (single split)    931.0       0.388    0.470  0.084 1.010    0.334
+   vjepa default T-SDU-PD → 3DGait source→target pair (single split)    210.0       0.457    0.444  0.134 1.000    0.165
+   vjepa default T-SDU-PD → BMClab source→target pair (single split)    893.0       0.465    0.475  0.162 0.757    0.204
+   vjepa default T-SDU-PD → PD-GaM source→target pair (single split)   2401.0       0.219    0.462  0.000 2.275    0.040
+  vjepa2 default   3DGait → BMClab source→target pair (single split)    893.0       0.525    0.574  0.468 0.469    0.536
+  vjepa2 default   3DGait → PD-GaM source→target pair (single split)   2401.0       0.417    0.577  0.389 0.542    0.608
+  vjepa2 default 3DGait → T-SDU-PD source→target pair (single split)    931.0       0.349    0.373  0.244 0.779    0.376
+  vjepa2 default   BMClab → 3DGait source→target pair (single split)    210.0       0.549    0.544  0.360 0.722    0.483
+  vjepa2 default   BMClab → PD-GaM source→target pair (single split)   2401.0       0.346    0.479  0.304 0.721    0.362
+  vjepa2 default BMClab → T-SDU-PD source→target pair (single split)    931.0       0.403    0.409  0.291 0.895    0.291
+  vjepa2 default   PD-GaM → 3DGait source→target pair (single split)    210.0       0.280    0.267  0.277 0.811    0.440
+  vjepa2 default   PD-GaM → BMClab source→target pair (single split)    893.0       0.170    0.235  0.072 1.193    0.270
+  vjepa2 default PD-GaM → T-SDU-PD source→target pair (single split)    931.0       0.438    0.467  0.294 0.653    0.346
+  vjepa2 default T-SDU-PD → 3DGait source→target pair (single split)    210.0       0.445    0.433  0.227 0.722    0.230
+  vjepa2 default T-SDU-PD → BMClab source→target pair (single split)    893.0       0.444    0.465  0.171 0.769    0.274
+  vjepa2 default T-SDU-PD → PD-GaM source→target pair (single split)   2401.0       0.414    0.425  0.156 0.676    0.270
+  vjepa2     64f   3DGait → BMClab source→target pair (single split)    893.0       0.516    0.551  0.385 0.594    0.416
+  vjepa2     64f   3DGait → PD-GaM source→target pair (single split)   2401.0       0.390    0.541  0.402 0.591    0.623
+  vjepa2     64f 3DGait → T-SDU-PD source→target pair (single split)    931.0       0.331    0.360  0.173 0.856    0.360
+  vjepa2     64f   BMClab → 3DGait source→target pair (single split)    210.0       0.264    0.444  0.341 0.756    0.311
+  vjepa2     64f   BMClab → PD-GaM source→target pair (single split)   2401.0       0.200    0.225 -0.016 0.795   -0.148
+  vjepa2     64f BMClab → T-SDU-PD source→target pair (single split)    931.0       0.201    0.312  0.006 1.063    0.032
+  vjepa2     64f   PD-GaM → 3DGait source→target pair (single split)    210.0       0.345    0.456  0.131 1.222    0.408
+  vjepa2     64f   PD-GaM → BMClab source→target pair (single split)    893.0       0.210    0.254  0.076 1.285    0.326
+  vjepa2     64f PD-GaM → T-SDU-PD source→target pair (single split)    931.0       0.218    0.323  0.294 0.730    0.276
+  vjepa2     64f T-SDU-PD → 3DGait source→target pair (single split)    210.0       0.372    0.378  0.384 0.678    0.473
+  vjepa2     64f T-SDU-PD → BMClab source→target pair (single split)    893.0       0.422    0.425  0.160 0.890    0.364
+  vjepa2     64f T-SDU-PD → PD-GaM source→target pair (single split)   2401.0       0.313    0.378  0.121 1.340    0.443
+
+========================= MIDA =========================
+   model variant    scope                     scope_type  n_clips f1_macro_02 accuracy   qwk   mae spearman
+videomae default   3DGait dataset (LOSO-fold-aggregated)    210.0       0.494    0.478 0.483 0.567    0.569
+videomae default   BMClab dataset (LOSO-fold-aggregated)    893.0       0.617    0.641 0.465 0.457    0.508
+videomae default   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.610    0.644 0.582 0.413    0.604
+videomae default T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.426    0.430 0.251 0.674    0.337
+videomae    lora   3DGait dataset (LOSO-fold-aggregated)    210.0       0.495    0.489 0.518 0.533    0.605
+videomae    lora   BMClab dataset (LOSO-fold-aggregated)    893.0       0.600    0.625 0.461 0.449    0.506
+videomae    lora   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.589    0.621 0.557 0.440    0.589
+videomae    lora T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.436    0.436 0.255 0.669    0.381
+  dinov2 default   3DGait dataset (LOSO-fold-aggregated)    210.0       0.351    0.344 0.360 0.667    0.406
+  dinov2 default   BMClab dataset (LOSO-fold-aggregated)    893.0       0.611    0.650 0.515 0.425    0.600
+  dinov2 default   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.598    0.644 0.601 0.399    0.641
+  dinov2 default T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.479    0.493 0.359 0.596    0.445
+  dinov2  bilstm   3DGait dataset (LOSO-fold-aggregated)    210.0       0.334    0.356 0.332 0.778    0.412
+  dinov2  bilstm   BMClab dataset (LOSO-fold-aggregated)    893.0       0.546    0.569 0.498 0.475    0.475
+  dinov2  bilstm   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.620    0.674 0.692 0.333    0.703
+  dinov2  bilstm T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.438    0.425 0.409 0.622    0.404
+   vjepa default   3DGait dataset (LOSO-fold-aggregated)    210.0       0.536    0.511 0.469 0.589    0.597
+   vjepa default   BMClab dataset (LOSO-fold-aggregated)    893.0       0.594    0.619 0.511 0.426    0.581
+   vjepa default   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.586    0.618 0.580 0.405    0.610
+   vjepa default T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.460    0.470 0.269 0.625    0.394
+  vjepa2 default   3DGait dataset (LOSO-fold-aggregated)    210.0       0.488    0.489 0.451 0.567    0.495
+  vjepa2 default   BMClab dataset (LOSO-fold-aggregated)    893.0       0.612    0.632 0.492 0.449    0.559
+  vjepa2 default   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.602    0.636 0.631 0.372    0.648
+  vjepa2 default T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.465    0.472 0.379 0.596    0.413
+  vjepa2     64f   3DGait dataset (LOSO-fold-aggregated)    210.0       0.520    0.511 0.481 0.589    0.608
+  vjepa2     64f   BMClab dataset (LOSO-fold-aggregated)    893.0       0.618    0.642 0.522 0.421    0.583
+  vjepa2     64f   PD-GaM dataset (LOSO-fold-aggregated)   2401.0       0.626    0.663 0.664 0.350    0.667
+  vjepa2     64f T-SDU-PD dataset (LOSO-fold-aggregated)    931.0       0.426    0.433 0.321 0.627    0.460

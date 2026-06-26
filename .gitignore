@@ -1,0 +1,23 @@
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ── OS / editor / tooling ─────────────────────────────────────────────────
+.DS_Store
+.idea/
+
+# ── Large data — NOT redistributed (see README "Data" for how to obtain) ──
+# Care-PD cohorts, rendered videos and cached feature pickles are multi-GB and
+# the SMPL body models are licence-restricted, so none of it is committed.
+assets/datasets/
+assets/checkpoints/
+utils/smpl/models/
+
+# ── Transient evaluation output ───────────────────────────────────────────
+# Committed example run lives in outputs/runs/<date>/; scratch + symlink don't.
+outputs/_scratch/
+outputs/latest

@@ -1,0 +1,37 @@
+# Python dependencies for the BEP pipeline.
+# Use Python >= 3.10 with numpy >= 2.0. The cached V-JEPA 2 feature pickles were
+# created under numpy 2.x and only unpickle with numpy >= 2.0; numpy 2.x is the
+# single environment that runs every step (extraction, evaluation, figures).
+# Install with:  pip install -r requirements.txt
+#
+# Versions are otherwise left unpinned for portability; if you hit an API
+# mismatch on the transformers-based extractors (VideoMAE / V-JEPA 2), pin
+# transformers to a 4.4x release.
+
+# Core numerics / ML
+numpy>=2.0
+pandas
+scipy
+scikit-learn
+
+# Deep-learning backbones (feature extraction)
+torch
+transformers          # VideoMAE + V-JEPA 2 feature extractors
+
+# 2D silhouette rendering (SMPL meshes -> MP4)
+smplx
+pyrender
+trimesh
+imageio
+opencv-python          # imported as cv2
+
+# Plotting / figures
+matplotlib
+seaborn
+
+# Utilities
+tqdm
+
+# Note: V-JEPA 1 uses the vendored code in model/jepa/ (see its own
+# requirements.txt). Its ViT-L/16 checkpoint is downloaded on demand —
+# see scripts/vjepa/extract_features.py.

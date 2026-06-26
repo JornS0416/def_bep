@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-06-18 18:26:35",
+  "model": "V-JEPA (ViT-L/16), frozen, mean-pool over 1568 tokens",
+  "evaluation": "LODO \u2014 train on D-1 datasets, test on held-out",
+  "probe": "LogisticRegression (C=1.0, class_weight=balanced)",
+  "datasets": [
+    "PD-GaM",
+    "BMClab",
+    "3DGait",
+    "T-SDU-PD"
+  ],
+  "folds": [
+    {
+      "held_out": "PD-GaM",
+      "n_train_clips": 2034,
+      "n_test_clips": 2401,
+      "n_test_walks": 1700,
+      "train_datasets": {
+        "BMClab": 893,
+        "3DGait": 210,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 812,
+        "1": 861,
+        "2": 692,
+        "3": 36
+      },
+      "f1_macro_03": 0.2953,
+      "f1_macro_02": 0.3278,
+      "f1_weighted": 0.412,
+      "accuracy": 0.4406,
+      "mae": 0.6676,
+      "qwk": 0.2731,
+      "spearman": 0.3022
+    },
+    {
+      "held_out": "BMClab",
+      "n_train_clips": 3542,
+      "n_test_clips": 893,
+      "n_test_walks": 779,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "3DGait": 210,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 341,
+        "1": 277,
+        "2": 275
+      },
+      "f1_macro_03": 0.3948,
+      "f1_macro_02": 0.5263,
+      "f1_weighted": 0.5484,
+      "accuracy": 0.5443,
+      "mae": 0.5584,
+      "qwk": 0.3845,
+      "spearman": 0.495
+    },
+    {
+      "held_out": "3DGait",
+      "n_train_clips": 4225,
+      "n_test_clips": 210,
+      "n_test_walks": 90,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "BMClab": 893,
+        "T-SDU-PD": 931
+      },
+      "updrs_dist_test": {
+        "0": 34,
+        "1": 89,
+        "2": 44,
+        "3": 43
+      },
+      "f1_macro_03": 0.3615,
+      "f1_macro_02": 0.482,
+      "f1_weighted": 0.4342,
+      "accuracy": 0.4444,
+      "mae": 0.5667,
+      "qwk": 0.4609,
+      "spearman": 0.5911
+    },
+    {
+      "held_out": "T-SDU-PD",
+      "n_train_clips": 3504,
+      "n_test_clips": 931,
+      "n_test_walks": 381,
+      "train_datasets": {
+        "PD-GaM": 2401,
+        "BMClab": 893,
+        "3DGait": 210
+      },
+      "updrs_dist_test": {
+        "0": 179,
+        "1": 267,
+        "2": 485
+      },
+      "f1_macro_03": 0.2925,
+      "f1_macro_02": 0.3899,
+      "f1_weighted": 0.3843,
+      "accuracy": 0.3911,
+      "mae": 0.6982,
+      "qwk": 0.2827,
+      "spearman": 0.3514
+    }
+  ],
+  "summary": {
+    "f1_macro_03_mean": 0.336,
+    "f1_macro_03_std": 0.0438,
+    "f1_macro_02_mean": 0.4315,
+    "f1_macro_02_std": 0.0775,
+    "f1_weighted_mean": 0.4447,
+    "f1_weighted_std": 0.0624,
+    "accuracy_mean": 0.4551,
+    "accuracy_std": 0.0556,
+    "mae_mean": 0.6227,
+    "mae_std": 0.0612,
+    "qwk_mean": 0.3503,
+    "qwk_std": 0.0773,
+    "spearman_mean": 0.4349,
+    "spearman_std": 0.1147
+  }
+}
